@@ -56,10 +56,6 @@ public class HomeWork1 {
          */
         int year = 1996;
         fourYear(year);
-        System.out.println(year%100);
-        System.out.println(year%4);
-        System.out.println(year%400);
-
 
     }
 
