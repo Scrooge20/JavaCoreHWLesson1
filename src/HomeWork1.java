@@ -54,8 +54,10 @@ public class HomeWork1 {
         Написать метод, который определяет, является ли год високосным, и выводит сообщение в консоль.
         Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
          */
-        int year = 1996;
-        fourYear(year);
+
+        for (int year_n = 1896; year_n < 1920; year_n = year_n + 2) {
+            fourYear(year_n);
+        }
 
     }
 
@@ -108,17 +110,14 @@ public class HomeWork1 {
     //Задание 8. Реализация. Высокосный год
     public static void fourYear (int a){
 
-        if (a%100 == 0){
-            System.out.println("Не высокосный год. Это Столетие.");
+        if (a % 100 != 0 && a % 4 == 0) {
+            System.out.println("Год :  " + a + " высокосный");
+        }else if ((a % 100 == 0) && (a % 400 == 0)){
+            System.out.println("Год :  " + a + " высокосный");
+        }else if (a % 100 == 0) {
+            System.out.println("Год :  " + a + " столетие");
+        }else {
+            System.out.println("Год :  " + a + " обычный год ");
         }
-        else if (a%4 == 0 || a%400 == 0){
-            System.out.println("Год : " + a + " - Это высокосный год");
-        }
-        else{
-            System.out.println("Обычный год");
-        }
-
-
     }
-
 }
